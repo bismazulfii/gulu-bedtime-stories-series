@@ -195,5 +195,17 @@
   GULU Bedtime Stories Series — Web Technologies assignment.
 </footer>
 
+<script>
+  // Jab koi ek video play ho, baaki sab ko pause kar do
+  const allVideos = document.querySelectorAll('video');
+  allVideos.forEach(video => {
+    video.addEventListener('play', () => {
+      allVideos.forEach(other => {
+        if (other !== video) other.pause();
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
