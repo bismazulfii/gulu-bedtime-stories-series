@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GULU Bedtime Stories Series</title>
+<style>
+  :root{
+    --bg: #14171c;
+    --bg-panel: #1c2028;
+    --ink: #eef0f3;
+    --ink-dim: #9aa2ad;
+    --accent: #c9a24a;
+    --line: #2a2f38;
+    --radius: 4px;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.5;
+  }
+
+  header{
+    padding: 64px 24px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+
+  header .kicker{
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+  }
+
+  header h1{
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin: 8px 0 12px;
+    font-weight: 400;
+  }
+
+  header p{
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    color: var(--ink-dim);
+    max-width: 480px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+  }
+
+  /* This is the single outer div wrapping every episode */
+  .series-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+  }
+
+  /* Each episode gets its own div */
+  .video-item{
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .video-item video{
+    width: 100%;
+    display: block;
+    background: #000;
+    aspect-ratio: 16/9;
+  }
+
+  .video-item .meta{
+    padding: 14px 16px 18px;
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+  }
+
+  .video-item .ep-number{
+    color: var(--accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+  }
+
+  .video-item .ep-title{
+    margin: 4px 0 0;
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+  }
+
+  footer{
+    text-align: center;
+    padding: 24px;
+    font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-dim);
+    border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">SHORT ANIMATED STORIES</div>
+  <h1>GULU Bedtime Stories Series</h1>
+  <p>A collection of short animated stories for toddlers, all in one place.</p>
+</header>
+
+<!-- ============================================
+     ONE PARENT DIV holding the whole series
+     ============================================ -->
+<div class="series-container">
+
+  <!-- Episode 1 -->
+  <div class="video-item">
+    <video controls>
+      <source src="videos/banana.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="meta">
+      <div class="ep-number">EPISODE 1</div>
+      <p class="ep-title">Banana</p>
+    </div>
+  </div>
+
+  <!-- Episode 2 -->
+  <div class="video-item">
+    <video controls>
+      <source src="videos/donut.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="meta">
+      <div class="ep-number">EPISODE 2</div>
+      <p class="ep-title">Donut Adventure</p>
+    </div>
+  </div>
+
+  <!-- Episode 3 -->
+  <div class="video-item">
+    <video controls>
+      <source src="videos/pug.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="meta">
+      <div class="ep-number">EPISODE 3</div>
+      <p class="ep-title">Pug in Love</p>
+    </div>
+  </div>
+
+  <!-- Episode 4 -->
+  <div class="video-item">
+    <video controls>
+      <source src="videos/shine.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="meta">
+      <div class="ep-number">EPISODE 4</div>
+      <p class="ep-title">Shine Again</p>
+    </div>
+  </div>
+
+  <!-- Episode 5 -->
+  <div class="video-item">
+    <video controls>
+      <source src="videos/bread.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="meta">
+      <div class="ep-number">EPISODE 5</div>
+      <p class="ep-title">The Bread</p>
+    </div>
+  </div>
+
+  <!-- Episode 6 -->
+  <div class="video-item">
+    <video controls>
+      <source src="videos/toast.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="meta">
+      <div class="ep-number">EPISODE 6</div>
+      <p class="ep-title">Toast</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  GULU Bedtime Stories Series — Web Technologies assignment.
+</footer>
+
+</body>
+</html>
